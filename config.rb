@@ -77,6 +77,11 @@ page "/feed.xml", layout: false
 #     "Helping"
 #   end
 # end
+helpers do
+  def relative_image(path, *args, &block)
+    image_tag(relative_path(path), *args, &block)
+  end
+end
 
 set :css_dir, 'stylesheets'
 
