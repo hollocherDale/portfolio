@@ -11,7 +11,7 @@ per_page: 10
 <% end %>
 
 <% blog.articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+  <h2><%= link_to article.title, article %> <%= article.date.strftime('%b %e') %></h2>
   <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
   <%= article.body %>
@@ -22,3 +22,99 @@ per_page: 10
     <p><%= link_to 'Next page', next_page %></p>
   <% end %>
 <% end %>
+
+<h1 class="category" id="projects">Projects</h1>
+<div>
+  <h2>LittleBoxes</h2>
+  <h3>A Gallery Showcase of Docker Containers</h3>
+  <small>Click image: navigate to page</small>
+  <ul class="img-list">
+    <li>
+      <a href="http://littleboxes.io">
+        <%= image_tag "images/littleb1.jpg", class: "screen_shot", height: '200px;', width: '400px', title:"LittleBoxes Homepage" %>
+        <span class="text-content"><span>LittleBoxes Homepage</span></span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.littleboxes.io/boxes/2">
+        <%= image_tag "images/littleb2.jpg", class: "screen_shot", height: '200px;', width: '400px'  %>
+        <span class="text-content"><span>Container Page</span></span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.littleboxes.io/users/2">
+        <%= image_tag "images/littleb3.jpg", class: "screen_shot", height: '200px;', width: '400px'  %>
+        <span class="text-content"><span>User page</span></span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.littleboxes.io/contacts/new">
+        <%= image_tag "images/littleb4.jpg", class: "screen_shot", height: '200px;', width: '400px'  %>
+        <span class="text-content"><span>Contact Form</span></span>
+      </a>
+    </li>
+  </ul>
+  <p>LittleBoxes is an index for docker containers. Docker is a popular emerging virtualization technology. It is used in a variety of contexts such as deploying development environments, or deplying platforms as a service. Our application would be an engaging atmosphere for discussing and sharing dockers. We integrated doge-coin tipping to connect with the very positve and engaged doge coin community.
+
+  The user model is backed by devise and, as a prototype, requries github authorization to connect. This was a logical choice since the docker community is prevalent on github.</p>
+  <span>
+    <a href="http://docker.io">Docker Home Page</a> |
+    <a href="http://littleboxes.io">LittleBoxes</a> |
+    <a href="#">LittleBoxes github</a><br />
+  </span>
+  <div><a href="#top">Top</a></div><br />
+</div>
+
+<div class="project">
+  <h2>Dandelion</h2>
+  <h3>Choose your own Adventure - Crowd Sourced Story Telling</h3>
+  <small>Click image: navigate to page</small>
+  <ul class="img-list">
+    <li>
+      <a href="http://dandelion.herokuapp.com/">
+        <%= image_tag "images/danda1.jpg", class: "screen_shot", height: '200px;', width: '400px', title:"LittleBoxes Homepage" %>
+        <span class="text-content"><span>Dandelion Adventures Homepage</span></span>
+      </a>
+    </li>
+    <li>
+      <a href="http://dandelion.herokuapp.com/adventures/10">
+        <%= image_tag "images/danda2.jpg", class: "screen_shot", height: '200px;', width: '400px'  %>
+        <span class="text-content">
+          <span>Add a story!<br />
+            <small>Sign-up required</small>
+          </span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="http://dandelion.herokuapp.com/adventures/5">
+        <%= image_tag "images/danda3.jpg", class: "screen_shot", height: '200px;', width: '400px'  %>
+        <span class="text-content"><span>Submission page</span></span>
+      </a>
+    </li>
+  </ul>
+  <p>Dandelion, my personal project, is a portal for users to engage in choose your own adventure stories and then extend them as a community. Users can submit additional paths to the story that are voted on and published on a daily basis. As stories are added, the adventure becomes bigger and bigger!</p>
+  <ul>
+    <li><a href="https://github.com/hollocherDale/dandelion">Dandelion github</li>
+  </ul>
+</div>
+
+<div><a href="#top">Top</a></div><br />
+
+<h1 id="about">About Dale Hollocher</h1>
+  <p>
+    I am a web developer in Portland, OR. I user Ruby on Rails to build web applications.
+  </p>
+  <div>
+    <%= image_tag "images/head_shot.jpg", height: "200px", id: "head-shot"%>
+  </div>
+<div><a href="#top">Top</a></div><br />
+
+<h1 id="contact">Contact Dale Hollocher</h1>
+  <span>
+    Look at my code on <a href="http://github.com/hollocherDale">Github</a>!<br />
+    Follow me on <a href="https://twitter.com/hollocherdale">Twitter</a><br />
+    Connect with me on <a href="http://www.linkedin.com/pub/dale-hollocher/93/11/377/">LinkedIn</a>
+  </span>
+<div><a href="#top">Top</a></div><br />
+

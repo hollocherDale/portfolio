@@ -10,17 +10,22 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+
 html,
 button,
 input,
 select,
 textarea {
     color: #222;
+    background: url('images/.png') center center fixed;
 }
+
+
 
 body {
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Lucida', sans-serif;;
 }
 
 /*
@@ -297,12 +302,116 @@ textarea {
     }
 }
 
+/*h1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9999px;
+    right: 0;
+    border-left: 9999px solid #41657F;
+    box-shadow: 9999px 0 0 #41657F;
+}*/
+
+
+
 .container {
   margin: 0 auto;
-  max-width: $max-width;
-  padding: 0 $padding;
+  width: 80%;
 }
 
 .header {
   text-align: center;
+  background-color: #41657F;
+}
+
+.footer {
+  text-align: center;
+  background-color: #41657F;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+h1 {
+  color: white;
+  position: relative;
+  background: #41657F;
+}
+
+#header-title{
+    font-size: 5em;
+}
+
+.header-links{
+    font-size: 1.2em;
+}
+
+/* unvisited link */
+a:link {
+color: #0B2336;
+}
+
+/* visited link */
+a:visited {
+color: #0B2336;
+}
+
+/* mouse over link */
+a:hover {
+color: #82CAFF;
+}
+
+
+a.header-links {
+    color: #BBCAFF;
+}
+
+/*img.screen_shot{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0B1436;
+    padding: 10px;
+    margin: 10px;
+}
+ */
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+ 
+ul.img-list li {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0B1436;  
+  display: inline-block;
+  height: 200px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 400px;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  opacity: 0;
+}
+ 
+ul.img-list li:hover span.text-content {
+  opacity: 1;
 }
