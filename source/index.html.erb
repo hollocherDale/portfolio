@@ -10,8 +10,9 @@ per_page: 10
   <% end %>
 <% end %>
 
+<h1 class="category" id="blog">Code Adventures</h1>
 <% blog.articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <%= article.date.strftime('%b %e') %></h2>
+  <h2><%= article.title %> <%=article.date.strftime('%b %e') %></h2>
   <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
   <%= article.body %>
@@ -81,7 +82,7 @@ per_page: 10
         <%= image_tag "images/danda2.jpg", class: "screen_shot", height: '200px;', width: '400px'  %>
         <span class="text-content">
           <span>Add a story!<br />
-            <small>Sign-up required</small>
+            <small>Sign-up necessary</small>
           </span>
         </span>
       </a>
@@ -93,7 +94,7 @@ per_page: 10
       </a>
     </li>
   </ul>
-  <p>Dandelion, my personal project, is a portal for users to engage in choose your own adventure stories and then extend them as a community. Users can submit additional paths to the story that are voted on and published on a daily basis. As stories are added, the adventure becomes bigger and bigger!</p>
+  <p>Dandelion, my personal project, is a portal for users to engage in choose your own adventures and then extend them as a community. Users can submit additional paths to the story that are voted on and published on a daily basis. As stories are added, the adventure becomes bigger and bigger!</p>
   <ul>
     <li><a href="https://github.com/hollocherDale/dandelion">Dandelion github</li>
   </ul>
@@ -103,14 +104,12 @@ per_page: 10
 
 <h1 id="about">About Dale Hollocher</h1>
   <p>
-    I am a web developer in Portland, OR. I user Ruby on Rails to build web applications.
+    I am a web developer in Portland, OR. I use Rails to build web applications.
   </p>
   <div>
     <%= image_tag "images/head_shot.jpg", height: "200px", id: "head-shot"%>
   </div>
-<div><a href="#top">Top</a></div><br />
-
-<h1 id="contact">Contact Dale Hollocher</h1>
+<h3>Contact Dale Hollocher</h3>
   <span>
     Look at my code on <a href="http://github.com/hollocherDale">Github</a>!<br />
     Follow me on <a href="https://twitter.com/hollocherdale">Twitter</a><br />
