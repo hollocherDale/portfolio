@@ -78,6 +78,11 @@ page "/feed.xml", layout: false
 #   end
 # end
 helpers do
+  def relative_path(path)
+    basename = File.basename(current_page.path)
+    File.join(basename, path)
+  end
+  
   def relative_image(path, *args, &block)
     image_tag(relative_path(path), *args, &block)
   end
