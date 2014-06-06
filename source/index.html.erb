@@ -2,33 +2,12 @@
 pageable: true
 per_page: 10
 ---
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<h1 class="category" id="blog">Code Adventures</h1>
-<% blog.articles.each_with_index do |article, i| %>
-  <h2><%= article.title %> <%=article.date.strftime('%b %e') %></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
-
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
 
 <h1 class="category" id="projects">Projects</h1>
 <div>
   <h2>LittleBoxes</h2>
-  <h3>A Gallery Showcase of Docker Containers</h3>
-  <small>Click image: navigate to page</small>
+  <h3>A Gallery Showcase of Docker Containers | <small><a href="#">github</a></small></h3>
+  <!-- <small>Click image: navigate to page</small> -->
   <ul class="img-list">
     <li>
       <a href="http://littleboxes.io">
@@ -55,21 +34,19 @@ per_page: 10
       </a>
     </li>
   </ul>
-  <p>LittleBoxes is an index for docker containers. Docker is a popular emerging virtualization technology. It is used in a variety of contexts such as deploying development environments, or deplying platforms as a service. Our application would be an engaging atmosphere for discussing and sharing dockers. We integrated doge-coin tipping to connect with the very positve and engaged doge coin community.
+  <p>LittleBoxes is an index for docker containers. <a href="http://docker.io">Docker</a> is a popular emerging virtualization technology. It is used in a variety of contexts such as deploying development environments, or deplying platforms as a service. Our application would be an engaging atmosphere for discussing and sharing dockers. We integrated doge-coin tipping to connect with the very positve and engaged doge coin community.
 
   The user model is backed by devise and, as a prototype, requries github authorization to connect. This was a logical choice since the docker community is prevalent on github.</p>
   <span>
-    <a href="http://docker.io">Docker Home Page</a> |
-    <a href="http://littleboxes.io">LittleBoxes</a> |
-    <a href="#">LittleBoxes github</a><br />
+<br />
   </span>
-  <div><a href="#top">Top</a></div><br />
+  <div id="top-link"><a href="#top">Top</a></div><br />
 </div>
 
 <div class="project">
   <h2>Dandelion</h2>
-  <h3>Choose your own Adventure - Crowd Sourced Story Telling</h3>
-  <small>Click image: navigate to page</small>
+  <h3>Choose your own Adventure - Crowd Sourced Story Telling | <small><a href="https://github.com/hollocherDale/dandelion">github</a></small></h3>
+  <!-- <div><small id="small-message">Click image: navigate to page</small></div> -->
   <ul class="img-list">
     <li>
       <a href="http://dandelion.herokuapp.com/">
@@ -95,12 +72,32 @@ per_page: 10
     </li>
   </ul>
   <p>Dandelion, my personal project, is a portal for users to engage in choose your own adventures and then extend them as a community. Users can submit additional paths to the story that are voted on and published on a daily basis. As stories are added, the adventure becomes bigger and bigger!</p>
-  <ul>
-    <li><a href="https://github.com/hollocherDale/dandelion">Dandelion github</li>
-  </ul>
 </div>
 
-<div><a href="#top">Top</a></div><br />
+<div id="top-link"><a href="#top">Top</a></div><br />
+
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<h1 class="category" id="blog">Blog</h1>
+<% blog.articles.each_with_index do |article, i| %>
+  <h2><%= article.title %> <%=article.date.strftime('%b %e') %></h2>
+  <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+  <%= article.body %>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>
+
 
 <h1 id="about">About Dale Hollocher</h1>
   <p>
@@ -115,5 +112,5 @@ per_page: 10
     Follow me on <a href="https://twitter.com/hollocherdale">Twitter</a><br />
     Connect with me on <a href="http://www.linkedin.com/pub/dale-hollocher/93/11/377/">LinkedIn</a>
   </span>
-<div><a href="#top">Top</a></div><br />
+<div id="top-link"><a href="#top">Top</a></div><br />
 
