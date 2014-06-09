@@ -302,19 +302,6 @@ textarea {
     }
 }
 
-/*h1:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -9999px;
-    right: 0;
-    border-left: 9999px solid #1E5C5F;
-    box-shadow: 9999px 0 0 #1E5C5F;
-}*/
-
-
-
 .container {
   margin: 0 auto;
   width: 80%;
@@ -322,25 +309,47 @@ textarea {
 
 .header {
   text-align: center;
-  background-color: #1E5C5F;
+  background: rgb(125,185,232); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(125,185,232,1) 0%, rgba(41,137,216,1) 17%, rgba(30,87,153,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,1)), color-stop(17%,rgba(41,137,216,1)), color-stop(100%,rgba(30,87,153,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(41,137,216,1) 17%,rgba(30,87,153,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(41,137,216,1) 17%,rgba(30,87,153,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(41,137,216,1) 17%,rgba(30,87,153,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(125,185,232,1) 0%,rgba(41,137,216,1) 17%,rgba(30,87,153,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+
 }
 
-.footer {
+footer {
   text-align: center;
-  background-color: #1E5C5F;
   padding-top: 10px;
   padding-bottom: 20px;
+  background: rgb(30,87,153); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 84%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(84%,rgba(41,137,216,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 84%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 84%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 84%,rgba(125,185,232,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 84%,rgba(125,185,232,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+
 }
 
-h1 {
+h1.category {
   color: white;
   position: relative;
-  background: #424242;
   padding-left: 20px;
-}
+  margin-top: 100px;
+  background: rgb(110,110,110); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(110,110,110,1) 0%, rgba(107,107,107,1) 8%, rgba(255,255,255,1) 53%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(110,110,110,1)), color-stop(8%,rgba(107,107,107,1)), color-stop(53%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(110,110,110,1) 0%,rgba(107,107,107,1) 8%,rgba(255,255,255,1) 53%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(110,110,110,1) 0%,rgba(107,107,107,1) 8%,rgba(255,255,255,1) 53%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(110,110,110,1) 0%,rgba(107,107,107,1) 8%,rgba(255,255,255,1) 53%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(110,110,110,1) 0%,rgba(107,107,107,1) 8%,rgba(255,255,255,1) 53%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e6e6e', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 
-.category {
-    margin: 10px;
 }
 
 #header-title{
@@ -351,15 +360,15 @@ h1 {
     font-size: 1.2em;
 }
 
-.header h1{
-    background: #1E5C5F;
-
+a:link {
+    text-decoration: none;
 }
 
 /* unvisited link */
 a:link {
 color: #0B2336;
 }
+
 
 /* visited link */
 a:visited {
@@ -444,4 +453,18 @@ p {
 
 #small-message{
     text-align: center;
+}
+
+#contact {
+  text-align: center;
+}
+
+footer span {
+  padding: 10px;
+  display:block;
+}
+
+header span {
+  padding: 10px;
+  display:block;
 }
