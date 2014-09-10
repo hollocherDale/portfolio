@@ -4,7 +4,7 @@ per_page: 10
 ---
 <h1 class="category" id="about">About Dale</h1>
 <p>
-  My passion is creating dynamic, interactive platforms. I am a web developer in Portland, OR and I use Rails to build web applications. My current aspiration is to continue my study of rails and then learn javascript. I will build elegant and pleasant applications.
+  My passion is creating dynamic, interactive platforms. I am a web developer in Portland, OR and I use Rails to build web applications.
 </p>
 
 <h2 id="contact">Contact Dale</h2>
@@ -66,19 +66,13 @@ per_page: 10
       </a>
     </li>
     <li>
-      <a href="http://dandelion.herokuapp.com/adventures/10">
+      <a href="http://dandelion.herokuapp.com/chapters/1">
         <img class="screen_shot" src="images/danda2.jpg", height='200', width='400'>
         <span class="text-content">
-          <span>Add a story!<br />
-            <small>Sign-up necessary</small>
+          <span>Read a book!<br />
+            <small>It's a small book...</small>
           </span>
         </span>
-      </a>
-    </li>
-    <li>
-      <a href="http://dandelion.herokuapp.com/adventures/5">
-        <img class="screen_shot" src="images/danda3.jpg", height='200', width='400'>
-        <span class="text-content"><span>Submission page</span></span>
       </a>
     </li>
   </ul>
@@ -87,27 +81,5 @@ per_page: 10
 </div>
 
 <div id="top-link"><a href="#top">Top</a></div><br />
-
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<h1 class="category" id="blog">Blog</h1>
-<% blog.articles.each_with_index do |article, i| %>
-  <h2><%= article.title %> <%=article.date.strftime('%b %e') %></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
-
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
 
 
